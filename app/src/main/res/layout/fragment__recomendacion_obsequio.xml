@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.Fragment_RecomendacionObsequio"
+    android:id="@+id/fragment_RecomendacionObsequio1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_RecomendacionObsequio2">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responder las Siguientes Preguntas"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Celebracion"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_tipo_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.88" />
+
+        <Spinner
+            android:id="@+id/spinner_tipo_evento"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_dirigido_a_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+        <TextView
+            android:id="@+id/tv_dirigido_a_fragment_recomendacionObsequio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relacion"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_parentesco_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97" />
+
+        <Spinner
+            android:id="@+id/spinner_parentesco_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayout_fragment_recomendacion_obsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout_fragment_recomendacion_obsequio"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pregunta_1_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nombre_fragment_recomendacion_obsequio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Para: (Ingresar Nombre)"
+                android:gravity="center"
+                android:textColor="#000"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_pregunta_1_fragment_recomendacionObsequio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="En su tiempo libre, ¿Qué le gusta hacer?"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_1_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+        <Spinner
+            android:id="@+id/spinner_pregunta_1_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pregunta_2_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <TextView
+            android:id="@+id/tv_pregunta_2_fragment_recomendacionObsequio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuál es su forma de vestir?"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_2_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+        <Spinner
+            android:id="@+id/spinner_pregunta_2_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pregunta_3_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <TextView
+            android:id="@+id/tv_pregunta_3_fragment_recomendacionObsequio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuánto le gusta cuidarse?"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_3_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+        <Spinner
+            android:id="@+id/spinner_pregunta_3_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_pregunta_4_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <TextView
+            android:id="@+id/tv_pregunta_4_fragment_recomendacionObsequio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Qué actividad prefiere hacer?"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_4_fragment_recomendacionObsequio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+        <Spinner
+            android:id="@+id/spinner_pregunta_4_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+        <Button
+            android:id="@+id/btn_buscar_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forma_boton_uno"
+            android:text="Buscar Obsequio"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btn_buscar_segunEvento_fragment_recomendacionObsequio"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forma_boton_uno"
+            android:text="Buscar Obsequio"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

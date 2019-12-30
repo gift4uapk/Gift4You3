@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.Fragment_Historial"
+    android:id="@+id/fragment_Historial1">
+
+    <ProgressBar
+        android:id="@+id/progress_bar_recomendaciones_realizadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_no_hay_recomendaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No has solicitado recomendacion de obsequio"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_Historial2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_parentesco_fragment_historial"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relacion"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_parentesco_fragment_historial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"/>
+        <Spinner
+            android:id="@+id/spinner_parentesco_fragment_historial"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_dirigido_a_fragment_historial"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.915" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_dirigido_a_fragment_historial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="Para"
+                android:textColor="#000"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/spinner_nombre_fragment_historial"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98"/>
+
+            <Spinner
+                android:id="@+id/spinner_nombre_fragment_historial"
+                android:layout_width="280dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:background="@drawable/forma_spinner_uno"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txt_pregunta_1_guardada"
+                app:layout_constraintVertical_bias="0.85"/>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout_respuestas_fragment_historial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <TextView
+                    android:id="@+id/txt_pregunta_1_guardada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="En su tiempo libre, ¿Qué le gusta hacer?"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_1_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98" />
+
+                <Spinner
+                    android:id="@+id/spinner_pregunta_1_guardada"
+                    android:layout_width="280dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/forma_spinner_uno"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_pregunta_2_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.93" />
+
+                <TextView
+                    android:id="@+id/txt_pregunta_2_guardada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuál es su forma de vestir?"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_2_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98" />
+
+                <Spinner
+                    android:id="@+id/spinner_pregunta_2_guardada"
+                    android:layout_width="280dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/forma_spinner_uno"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_pregunta_3_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.93" />
+
+                <TextView
+                    android:id="@+id/txt_pregunta_3_guardada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Cuánto le gusta cuidarse?"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_3_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98" />
+
+                <Spinner
+                    android:id="@+id/spinner_pregunta_3_guardada"
+                    android:layout_width="280dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/forma_spinner_uno"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_pregunta_4_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.93" />
+
+                <TextView
+                    android:id="@+id/txt_pregunta_4_guardada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué actividad prefiere hacer?"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spinner_pregunta_4_guardada"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98" />
+
+                <Spinner
+                    android:id="@+id/spinner_pregunta_4_guardada"
+                    android:layout_width="280dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/forma_spinner_uno"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_actualizar_respuestas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.90" />
+
+                <Button
+                    android:id="@+id/btn_actualizar_respuestas"
+                    android:layout_width="280dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/forma_boton_uno"
+                    android:text="Guardar Respuestas"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_nueva_recomendacion"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.95" />
+
+                <Button
+                    android:id="@+id/btn_nueva_recomendacion"
+                    android:layout_width="280dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/forma_boton_uno"
+                    android:text="Buscar Obsequios"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.98" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

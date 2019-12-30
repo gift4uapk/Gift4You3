@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="440dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_agregar_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_agregar_evento_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Agregar Evento"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_fecha_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="fecha"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_tipo_celebracion_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.85" />
+
+        <TextView
+            android:id="@+id/tv_tipo_celebracion_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Tipo de Celebracion"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_evento_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <Spinner
+            android:id="@+id/spinner_evento_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/tv_parentesco_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.92" />
+
+        <TextView
+            android:id="@+id/tv_parentesco_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Parentesco"
+            android:textColor="#000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_parentesco_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.99" />
+
+        <Spinner
+            android:id="@+id/spinner_parentesco_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_spinner_uno"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutpar_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutpar_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout_recordatoriossss"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_referente_a_agregar_evento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="De (ingresar nombre)"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout_recordatoriossss"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_ingresar_agregar_evento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_agregar_evento_agregar_evento"
+            app:layout_constraintVertical_bias="0.99">
+
+
+            <TextView
+                android:id="@+id/tv_recordatorio_enunciado_agregar_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Recordatorio fijado para el:"
+                android:textSize="17sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_recordatorio_agregar_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="5dp"
+                android:text="Sin Recordatorio"
+                android:textSize="17sp" />
+
+
+            <Button
+                android:id="@+id/btn_agregar_recordatorio_agregar_evento"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icono_agregar_redondo" />
+
+
+            <Button
+                android:id="@+id/btn_eliminar_recordatorio_agregar_evento"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/icono_eliminar_redondo"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_ingresar_agregar_evento"
+            android:layout_width="230dp"
+            android:layout_height="35dp"
+            android:background="@drawable/forma_boton_uno"
+            android:text="@string/registrar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

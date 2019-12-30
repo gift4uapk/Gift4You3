@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.Fragment_ProductoDetallado">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout_mostrar_detalles"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titulo_producto_regis_detalle"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="Titulo"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/imagen_principal_producto_regis_detalle"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginVertical="5dp"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:id="@+id/subtitulo_producto_regis_detalle"
+            android:text="Subtitulo"
+            android:textSize="22sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#000"
+            android:id="@+id/descripcion_producto_regis_detalle"
+            android:text="Descripcion"
+            android:layout_marginVertical="3dp"
+            android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precio: "
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:layout_marginStart="121dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:id="@+id/precio_producto_regis_detalle"
+                android:text="Precio"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/forma_boton_uno"
+            android:text="Comprar"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#FFFFFF" />
+
+                    <stroke android:width="3dp" android:color="#D82B2B" />
+
+                    <padding android:bottom="1dp" android:left="1dp" android:right="1dp" android:top="1dp" />
+
+                    <corners android:radius="50dp" />
+                </shape>
+            </item>
+            <item>
+
+                <bitmap android:gravity="bottom|right"
+                    android:src="@drawable/flecha_abajo_spinner">
+                </bitmap>
+
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

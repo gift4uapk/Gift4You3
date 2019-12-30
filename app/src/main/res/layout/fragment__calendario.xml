@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.Fragment_Calendario"
+    android:id="@+id/fragment_calendario1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tv_fecha_fragment_calendario"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Mes - Año"
+            android:textColor="#000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/calendar_view_fragment_calendario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98" />
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            android:id="@+id/calendar_view_fragment_calendario"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="#00FFFFFF"
+            app:compactCalendarCurrentDayBackgroundColor="#661818"
+            app:compactCalendarCurrentSelectedDayBackgroundColor="#e8d1d1"
+            app:compactCalendarMultiEventIndicatorColor="#FF0000"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarTextColor="#D82B2B"
+            app:compactCalendarTextSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar_fragment_calendario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.04"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
+
+        <TextView
+            android:id="@+id/tv_sin_evento_fragment_calendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sin Evento Registrado"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_evento_registrado_fragment_calendario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evento Registrado"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".05" />
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/imageButton_editar_fragment_calendario"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:background="@drawable/icono_editar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.72"
+            app:layout_constraintStart_toEndOf="@+id/tv_evento_registrado_fragment_calendario"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.00" />
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/imageButton_eliminar_fragment_calendario"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:background="@drawable/icono_eliminar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toEndOf="@+id/imageButton_editar_fragment_calendario"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.00" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout_mostrar_evento_regis_fragment_calendario"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_evento_registrado_fragment_calendario"
+            app:layout_constraintVertical_bias="0.72"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Celebracion: "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/tv_tipoEvento_fragment_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Evento"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_parentesco_fragment_calendario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De: "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7" />
+
+            <TextView
+                android:id="@+id/tv_parentesco_fragment_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pariente"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7" />
+
+            <TextView
+                android:id="@+id/tv_referenteA_fragment_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_recordatorio_fragment_calendario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toEndOf="@+id/tv_parentesco_fragment_calendario"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recordatorio:"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.025"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".8" />
+
+            <TextView
+                android:id="@+id/tv_recordatorio_fragment_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="recordario"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.07"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <TextView
+                android:id="@+id/tv_uid_fragment_calendario"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_agregar_evento_fragment_calendario"
+        android:layout_width="300dp"
+        android:background="@drawable/forma_boton_uno"
+        android:layout_height="wrap_content"
+        android:text="Agregar Evento"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

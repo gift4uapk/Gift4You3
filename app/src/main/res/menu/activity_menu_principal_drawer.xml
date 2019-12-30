@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/logo_obsequio"
+            android:title="Regalos" />
+        <item
+            android:id="@+id/nav_recomendacion_obsequio"
+            android:icon="@drawable/logo_buscar"
+            android:title="Buscar obsequio ideal"
+            android:tooltipText="#FFFFFF"/>
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@drawable/logo_historial"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_calendario"
+            android:icon="@drawable/logo_calendario"
+            android:title="Calendario" />
+    </group>
+
+    <item android:title="Configuracion">
+        <menu>
+            <item
+                android:id="@+id/cerrar_sesion_menu_principal"
+                android:icon="@drawable/logo_cerrar_sesion"
+                android:title="Cerrar Sesion"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.example.gift4you.ui.fragment.Fragment_Inicio"
+        android:label="Regalos"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_calendario"
+        android:name="com.example.gift4you.ui.fragment.Fragment_Calendario"
+        android:label="Calendario"
+        tools:layout="@layout/fragment__calendario" />
+
+    <fragment
+        android:id="@+id/nav_historial"
+        android:name="com.example.gift4you.ui.fragment.Fragment_Historial"
+        android:label="Recomendaciones Solicitadas"
+        tools:layout="@layout/fragment__historial" />
+
+    <fragment
+        android:id="@+id/nav_recomendacion_obsequio"
+        android:name="com.example.gift4you.ui.fragment.Fragment_RecomendacionObsequio"
+        android:label="Encuentra el Obsequio Ideal"
+        tools:layout="@layout/fragment__recomendacion_obsequio" />
+
+
+</navigation>
